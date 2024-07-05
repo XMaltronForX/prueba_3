@@ -1,0 +1,25 @@
+{% extends "maltron/base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<div class="row">
+    {% if productos %}
+        {% for producto in productos %}
+        <div class="col-6">
+            <div class="card">
+                <img src="{{ producto.imagen.url }}" class="card-img-top" alt="{{ producto.marca }}">
+                <div class="card-body">
+                    <h5 class="card-title llamativo">{{ producto.marca }}</h5>
+                    <p class="card-text verde-llamativo">{{ producto.informacion }}</p>
+                    <p class="card-text verde-llamativo"><strong>Precio:</strong> {{ producto.precio }}</p>
+                    <a href="{% url 'agregar_producto' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay productos disponibles.</p>
+    {% endif %}
+</div>
+{% endblock %}

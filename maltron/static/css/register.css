@@ -1,0 +1,164 @@
+/* Estilos para el formulario de registro */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(150deg, #6C3483, #58d683);
+    height: 100vh;
+}
+
+/* Estilos generales para el formulario */
+.formulario {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el encabezado */
+.formulario h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(111, 190, 255);
+    color: #6C3483;
+}
+
+/* Estilos para los campos del formulario */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de enviar */
+.formulario input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #6C3483;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #e85bf5;
+}
+
+/* Estilos para los enlaces adicionales */
+.formulario .recordar,
+.formulario .registrarse {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formulario .recordar a,
+.formulario .registrarse a {
+    text-decoration: none;
+    color: #524f4379;
+    transition: color 0.3s ease;
+}
+
+.formulario .recordar a:hover,
+.formulario .registrarse a:hover {
+    color: #333;
+}
+
+
+nav {
+    &.primary-navigation {
+      margin: 0 auto;
+      display: block;
+    
+      padding: 120px 0 0 0;  
+      text-align: center;
+      font-size: 16px;
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid #3ca0e7;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: arvo;
+      }
+  
+      li a {
+        color: black;
+      }
+  
+      li a:hover {
+        color: #3ca0e7;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+  padding-left: 0;
+        left: 0;
+        display: none;
+        background: white;
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 250px;
+        text-align: left;
+        padding-top: 20px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+      }
+  
+      ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      ul li ul li a:hover {
+        padding-left: 10px;
+        border-left: 2px solid #3ca0e7;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  a {
+  
+      text-decoration: none;
+  
+      &:hover {
+          color: #3CA0E7;
+      }
+   
+  }
+  
+   ul li ul li a { transition: all 0.5s ease; }
+  
